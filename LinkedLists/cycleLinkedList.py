@@ -38,3 +38,42 @@ class Solution2(object):
             return True
         except:
             return False
+
+if __name__ == '__main__':
+    s = Solution()
+
+    node_1 = ListNode(1)
+    node_5 = ListNode(1)
+    node_11 = ListNode(1)
+    node_8 = ListNode(1)
+    node_9 = ListNode(1)
+
+    node_1.next = node_5
+    node_5.next = node_11
+    node_11.next = node_8
+    node_8.next = node_9
+    node_9.next = node_5
+
+    answer = s.hasCycle(node_1)
+
+    print(answer)
+
+    print('************************************')
+
+    s2 = Solution2()
+
+    node_1 = ListNode(1)
+    node_5 = ListNode(1)
+    node_11 = ListNode(1)
+    node_8 = ListNode(1)
+    node_9 = ListNode(1)
+
+    node_1.next = node_5
+    node_5.next = node_11
+    node_11.next = node_8
+    node_8.next = node_9
+    node_9.next = node_5
+
+    answer = s2.hasCycle(node_1)
+
+    print(answer)
